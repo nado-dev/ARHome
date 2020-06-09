@@ -21,6 +21,9 @@ public class FragmentOne extends Fragment {
     }
 
     private void initView(View view) {
+        // 获取view对象的方法
+        // Button button = (Button)view.findViewById(R.id.xxx);
+        // TODO 按钮设置监听等
 
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ar.arhome.Activity.helpActivity"
+    android:background="#fff">
+
+    <TextView
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="在左上角选择需要放置的模型，选择后请将手机摄像头内场景沿着水平方向缓慢移动\n
+当出现白色的锚点时即可点击锚点区域进行模型的放置。\n模型可以左后旋转。\n点击模型上面的名牌可以取消模型放置。"/>
+</LinearLayout>
