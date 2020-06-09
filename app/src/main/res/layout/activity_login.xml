@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:text="欢迎您，请登录"
+        android:textColor="#666666"
+        android:textSize="28sp" />
+
+
+
+        <EditText
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center"
+            android:id="@+id/phoneNum"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_shape"
+            android:hint="手机号码(仅限中国大陆)"
+            android:padding="12dp"
+            android:textColorHighlight="#3F51B5"
+            android:textColorHint="#666666"
+            android:textColorLink="#3F51B5"
+            android:shadowColor="#CCCCCC"
+            android:textSize="14sp" />
+
+
+
+
+        <EditText
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:id="@+id/code"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:background="@drawable/edittext_shape"
+            android:textColorHighlight="#3F51B5"
+            android:textColorHint="#666666"
+            android:textColorLink="#3F51B5"
+            android:shadowColor="#CCCCCC"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:id="@+id/loadCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_shape"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:shadowColor="#CCCCCC"
+            android:text="获取验证码"
+            android:textSize="14sp" />
+
+
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_login_shape"
+        android:padding="5dp"
+        android:text="登录"
+        android:shadowColor="#CCCCCC"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:text="如果您未注册，我们将为您以此手机号注册账户"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:text="登录即代表您同意并接受《用户协议》与《隐私保护政策》"/>
+</LinearLayout>
