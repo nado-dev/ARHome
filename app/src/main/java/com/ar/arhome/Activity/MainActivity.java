@@ -59,15 +59,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         bottomNavigationBar.setActiveColor(R.color.pure_white);//激活态
         bottomNavigationBar.setInActiveColor(R.color.background_dark_gray);//非激活态
 
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.index, ""))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.index, "首页"))
                 .setInActiveColor(R.color.normal_color)
                 .setFirstSelectedPosition(0)
                 .initialise();
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.camera, ""))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.camera, "预览"))
                 .setInActiveColor(R.color.normal_color)
                 .setFirstSelectedPosition(0)
                 .initialise();
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.me, ""))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.me, "我的"))
                 .setInActiveColor(R.color.normal_color)
                 .setFirstSelectedPosition(0)
                 .initialise();

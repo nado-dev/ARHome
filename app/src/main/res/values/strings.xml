@@ -3,4 +3,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detail_text_1">占位1</string>
+    <string name="detail_text_2">占位2</string>
+    <string name="detail_text_3">占位3</string>
+    <string name="detail_text_4">占位4</string>
+    <string name="detail_text_5">占位5</string>
+    <string name="detail_text_6">占位6</string>
+    <string name="detail_text_7">占位7</string>
 </resources>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -9,14 +10,13 @@
         android:background="#FFF"
         android:fitsSystemWindows="true"
         android:gravity="center_vertical"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo2"
-            android:layout_gravity="center"/>
-
+            android:layout_gravity="center"
+            android:src="@drawable/logo2" />
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -28,7 +28,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="400dp"
@@ -36,7 +37,342 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/index_banner" />
+            <!-- 吧台椅 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
 
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/barstool"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="吧台椅"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="一张吧台椅，尖尖的四角似乎能戳穿地面。“搬动实物时请务必小心！”"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 床 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bed"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="床"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="一张双人床，床单拖到了地上却没有弄脏。“想玩枕头大战吗？”"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 沙发 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sofa"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="沙发"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="一张看起来很普通的沙发。“简约设计，奢华体验！”"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 马桶 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/toilet"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="马桶"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="闪闪发光的马桶，坐上去似乎就会有好事发生。“白金体验！”"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 咖啡桌 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/traditionpalette"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="咖啡桌"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="源自丹麦的Tradition Palette，灵感源自调色盘。"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 棕熊 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bear"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="棕熊"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="“哦天哪，这里为什么会有熊的标本？”“先生，我保证这是真熊。”"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 猫 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cat"
+                    android:background="@drawable/btn_home_shape"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="猫"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pure_black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="“这只猫也是真的吗？”“对，你猜对了。”"
+                        android:textSize="15sp"
+                        android:textColor="@color/background_dark_gray"/>
+                    <Button
+                        android:id="@+id/fu_button_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="详 情 页"
+                        android:textSize="23dp"
+                        android:textColor="@color/pure_white"
+                        android:background="@drawable/btn_home_shape"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
