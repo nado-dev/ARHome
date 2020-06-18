@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ar.arhome.Domain.LoginUserInfo;
 import com.ar.arhome.R;
+
+import org.litepal.LitePal;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,11 +24,13 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        // 初始化数据库
+        // 2020.6.18 @fang
+        LitePal.getDatabase();
 
         //尝试取出已经保存的用户信息
         userInfo = LoginUserInfo.loadLoginUserInfo(this);
         this.token = userInfo.getString("Token","undefined");
-
         // 展示并开始倒计时
         TimerTask timeTask = new TimerTask() {
             @Override
@@ -37,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 // 否测直接进入主界面
                 else {
-                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
             }

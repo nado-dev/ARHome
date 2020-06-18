@@ -19,7 +19,7 @@
             android:orientation="horizontal"
             android:weightSum="1.0">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btn_return"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

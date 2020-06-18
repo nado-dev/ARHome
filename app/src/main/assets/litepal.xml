@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="FavoriteModel" />
+    <version value="2" />
+
+    <list>
+        <mapping class="com.ar.arhome.Sqlite.FavoriteModel"/>
+    </list>
+</litepal>

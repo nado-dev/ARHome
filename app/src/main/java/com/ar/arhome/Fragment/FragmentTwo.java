@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.ar.arhome.Activity.arFrameActivity;
+import com.ar.arhome.Activity.ARFrameActivity;
 import com.ar.arhome.R;
 
 public class FragmentTwo extends Fragment{
@@ -27,7 +27,7 @@ public class FragmentTwo extends Fragment{
     private void initView(View view) {
         ar_preview = view.findViewById(R.id.ar_preview);
         ar_preview.setOnClickListener((v)->{
-            Intent intent = new Intent(view.getContext(), arFrameActivity.class);
+            Intent intent = new Intent(view.getContext(), ARFrameActivity.class);
             startActivity(intent);
         });
     }

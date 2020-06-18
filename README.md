@@ -6,9 +6,14 @@
 #### 软件架构
 软件架构说明
 
+#### 进度
+2020/6/9 增加了AR帮助(HelpActivity)界面
+2020/6/10 增加了AR界面截图功能(ScreenShot.java, ARScreenShot.java)
+2020/6/12 添加了AR模型(.fbx .sfa .sfb .png )
+2020/6/17 主页面基本功能实现
+2020/6/18 增加了收藏功能 (Sqlite, MyFavoriteActivity.class)
 #### TODO
-* 主页页面设计
-* AR页面功能完善
+
 * 设置页/“我的”页设计
 
 #### 安装教程

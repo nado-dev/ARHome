@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
     android:orientation="vertical">
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_weight="5"
+    <FrameLayout
+        android:layout_weight="14"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Activity.arFrameActivity">
+        android:layout_height="0dp"
+        tools:context=".Activity.ARFrameActivity">
     <fragment
         android:id="@+id/sceneform_fragment"
         android:name="com.google.ar.sceneform.ux.ArFragment"
@@ -22,11 +22,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/barstool"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/barstool" />
+            <ImageView
+                android:id="@+id/bed"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bed" />
+
+            <ImageView
+                android:id="@+id/sofa"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sofa" />
+
+            <ImageView
+                android:id="@+id/toilet"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/toilet" />
+            <ImageView
+                android:id="@+id/traditionPalette"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/traditionpalette" />
             <ImageView
                 android:id="@+id/bear"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:contentDescription="BearModel"
                 android:src="@drawable/bear" />
             <ImageView
                 android:id="@+id/cat"
@@ -39,9 +66,8 @@
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="#FFF"
-        android:fitsSystemWindows="true"
         android:gravity="center_vertical"
         android:orientation="vertical" >
         <LinearLayout
@@ -54,8 +80,8 @@
                 android:id="@+id/ar_back"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/return_btn"/>
             <ImageView
                 android:paddingTop="8dp"
@@ -63,8 +89,8 @@
                 android:id="@+id/ar_screenshot"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/camera_1"/>
             <ImageView
                 android:paddingTop="8dp"
@@ -72,8 +98,8 @@
                 android:id="@+id/ar_help"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/help"/>
 
         </LinearLayout>

@@ -9,24 +9,27 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 摄像头权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera.ar" />
 
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MyFavoriteActivity"></activity>
         <activity android:name=".Activity.DetailActivity" />
-        <activity android:name=".Activity.helpActivity" />
+        <activity android:name=".Activity.HelpActivity" />
 
         <meta-data
             android:name="com.google.ar.core"
             android:value="optional" />
 
-        <activity android:name=".Activity.arFrameActivity" />
+        <activity android:name=".Activity.ARFrameActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.SplashActivity">
