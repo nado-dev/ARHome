@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ar.arhome.Activity.DetailActivity;
 import com.ar.arhome.R;
 import com.ar.arhome.Sqlite.FavoriteModel;
+import com.ar.arhome.Util.FavoritePerformance;
 
 import org.litepal.crud.DataSupport;
 
@@ -151,6 +152,9 @@ public class MyFavoriteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             DataSupport.deleteAll(FavoriteModel.class,
                     "owner = ? and modelNum = ?",favoriteModel.getOwner()
                     , String.valueOf(favoriteModel.getModelNum()));
+            FavoritePerformance favoritePerformance
+                    = new FavoritePerformance(context, favoriteModel.getOwner(), favoriteModel.getModelNum());
+            favoritePerformance.updateToMyFavoriteCollection(0);
             Toast.makeText(context, "取消收藏成功",Toast.LENGTH_SHORT).show();
             data.remove(favoriteModel);
             notifyDataSetChanged();

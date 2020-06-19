@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.ar.arhome.Domain.LoginUserInfo;
 import com.ar.arhome.R;
 import com.ar.arhome.Sqlite.FavoriteModel;
+import com.ar.arhome.Util.FavoritePerformance;
 
 import org.litepal.crud.DataSupport;
 
@@ -50,15 +51,30 @@ public class DetailActivity extends AppCompatActivity {
             finish();
         });
         // 以下是实现收藏功能的代码 2020.6.18 @房文宇
+        List<FavoriteModel> favoriteModelsExists = DataSupport
+                .where("owner = ?",token)
+                .find(FavoriteModel.class);
+        if (favoriteModelsExists.size() != 0) {
+            for (FavoriteModel item : favoriteModelsExists) {
+                if (item.getModelNum() == key) {
+                    btn_save.setText("取消收藏");
+                }
+            }
+        }
         btn_save.setOnClickListener(v->{
-            List<FavoriteModel> favoriteModelsExists = DataSupport
+            List<FavoriteModel> favoriteModelsExists1 = DataSupport
                     .where("owner = ?",token)
                     .find(FavoriteModel.class);
-            if (favoriteModelsExists.size() != 0){
-                for (FavoriteModel item: favoriteModelsExists){
-                    if (item.getModelNum() == key){
+            if (favoriteModelsExists1.size() != 0){
+                for (FavoriteModel item1: favoriteModelsExists1){
+                    if (item1.getModelNum() == key){
                         DataSupport.deleteAll(FavoriteModel.class,
                                 "owner = ? and modelNum = ?",token, String.valueOf(key));
+                        // 同步后台
+                        FavoritePerformance favoritePerformance = new FavoritePerformance(
+                                this, token, key);
+                        favoritePerformance.updateToMyFavoriteCollection(0);
+                        btn_save.setText("收藏");
                         Toast.makeText(this, "取消收藏成功",Toast.LENGTH_SHORT).show();
                         return;
                     }
@@ -72,11 +88,16 @@ public class DetailActivity extends AppCompatActivity {
             favoriteModel.setCreateTime(date);
             favoriteModel.save();
             //调试
-            favoriteModelsExists = DataSupport.findAll(FavoriteModel.class);
-            for(FavoriteModel favoriteModel1: favoriteModelsExists){
+            favoriteModelsExists1 = DataSupport.findAll(FavoriteModel.class);
+            for(FavoriteModel favoriteModel1: favoriteModelsExists1){
                 Log.d("DATA", favoriteModel1.getOwner()+"          "+favoriteModel1.getModelNum()+
                         "           "+favoriteModel1.getCreateTime()+"\n");
             }
+            // 同步后台
+            FavoritePerformance favoritePerformance = new FavoritePerformance(
+                    this, token, key);
+            favoritePerformance.updateToMyFavoriteCollection(1);
+            btn_save.setText("取消收藏");
             Toast.makeText(this, "收藏成功",Toast.LENGTH_SHORT).show();
 
 
