@@ -99,4 +99,15 @@ public class HttpUtil {
                 .build();
         client.newCall(request).enqueue(callback);
     }
+
+    public static void sendOkHttpRequestByPostMethodWithHeader(String address
+            , Headers headers, Callback callback) {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .headers(headers)
+                .url(address)
+                .post(okhttp3.internal.Util.EMPTY_REQUEST )
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
 }
