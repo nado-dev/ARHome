@@ -1,8 +1,7 @@
 # ARHome
-
+💬 项目后续开发已经迁移到https://gitee.com/afang123/ARHome
 #### 介绍
 AR家具预览应用 ARHome
-
 #### 进度
 * 2020/6/9 增加了AR帮助(HelpActivity)界面
 * 2020/6/10 增加了AR界面截图功能(ScreenShot.java, ARScreenShot.java)
